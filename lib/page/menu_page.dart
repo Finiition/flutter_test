@@ -5,6 +5,7 @@ import 'package:discorverflutter/page/ex2_page.dart';
 import 'package:discorverflutter/page/hello_page.dart';
 import 'package:discorverflutter/page/hero_page.dart';
 import 'package:discorverflutter/page/pass_data_main_page.dart';
+import 'package:discorverflutter/page/platform_native_page.dart';
 import 'package:discorverflutter/page/random_cat_page.dart';
 import 'package:discorverflutter/page/stream_listener_page.dart';
 import 'package:discorverflutter/widget/dbutton_widget.dart';
@@ -154,12 +155,18 @@ class _MenuPageState extends State<MenuPage> {
                               return ImagePickerPage();
                             }));
                           }, Colors.black),
-                          DButtonWidget(10, 'Stream', () {
+                          DButtonWidget(11, 'Stream', () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
                               return StreamListenerPage();
                             }));
-                          }, Colors.black),
+                          }, Colors.purple),
+                          DButtonWidget(12, 'Platform Message', () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return PlatformNativePage();
+                            }));
+                          }, Colors.deepPurple),
                         ],
                       ),
                     ),
